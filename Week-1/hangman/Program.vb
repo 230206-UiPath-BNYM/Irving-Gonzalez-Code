@@ -5,7 +5,6 @@ Module Program
         Console.Write("Target Word:  ")
         dim targetWord as string = Console.ReadLine()
         'Check for integers in word
-        Dim s As String = "This string has numbers65"
         Const numbers = "0123456789"
  
         If targetWord.IndexOfAny(numbers.ToArray) > -1 Then
@@ -13,7 +12,7 @@ Module Program
         Else
             targetWord = targetWord.toLower()
         End If
-        
+
         dim wordLen as integer = Len(targetWord)
         dim targetArray(wordLen) as string
         dim blankArray(wordLen) as string
