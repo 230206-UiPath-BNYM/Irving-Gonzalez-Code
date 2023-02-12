@@ -24,6 +24,7 @@ Module Program
     GuessingGame(1)
     Counter(3)
     GuessingGamev2()
+    Console.WriteLine("TEST FOR GITHUB")
     End Sub
 
     Function greeter(greeting_type As String) As String
