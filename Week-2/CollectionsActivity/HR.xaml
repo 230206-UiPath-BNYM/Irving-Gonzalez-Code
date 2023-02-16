@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="HR" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="600,3890" sap2010:WorkflowViewState.IdRef="HR_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:uasc="clr-namespace:UiPath.Activities.System.Collections;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="HR" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="678,3840" sap2010:WorkflowViewState.IdRef="HR_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:uasc="clr-namespace:UiPath.Activities.System.Collections;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="52">
       <x:String>System.Activities</x:String>
@@ -72,13 +72,9 @@
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="HR" sap:VirtualizedContainerService.HintSize="661,3826" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="HR" sap:VirtualizedContainerService.HintSize="661,3775" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="scg:List(x:String)" Name="New_Employees">
-        <Variable.Default>
-          <VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="New List(OF String)" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="scg:List(x:String)" Default="[New List(OF String)]" Name="New_Employees" />
       <Variable x:TypeArguments="x:String" Name="findPerson" />
       <Variable x:TypeArguments="x:Boolean" Name="exits" />
       <Variable x:TypeArguments="x:Int32" Name="index" />
@@ -100,7 +96,7 @@
         </scg:List>
       </uasc:AppendItemToCollection.Items>
     </uasc:AppendItemToCollection>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="599,326" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[New_Employees]">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="599,327" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[New_Employees]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
@@ -117,7 +113,7 @@
         </ActivityAction>
       </ui:ForEach.Body>
     </ui:ForEach>
-    <ui:InputDialog OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="599,292" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Who would you like to look for in our HR records?" Options="[{&quot;Grandma&quot;}]" Title="Welcome to HR!">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="599,239" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Who would you like to look for in our HR records?" Title="Welcome to HR!">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[findPerson]</OutArgument>
       </ui:InputDialog.Result>
@@ -151,7 +147,7 @@
         <OutArgument x:TypeArguments="x:String">[newHire]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[newHire]" sap:VirtualizedContainerService.HintSize="599,1402" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[newHire]" sap:VirtualizedContainerService.HintSize="599,1403" sap2010:WorkflowViewState.IdRef="Switch`1_1">
       <Sequence x:Key="Yes" sap:VirtualizedContainerService.HintSize="559,1195" sap2010:WorkflowViewState.IdRef="Sequence_4">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -187,7 +183,7 @@
               <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="338,85" sap2010:WorkflowViewState.IdRef="MessageBox_8" Text="[&quot;My lord we tried nothing&quot;]" />
             </Sequence>
           </Switch.Default>
-          <Sequence x:Key="Fire Average Joe" sap:VirtualizedContainerService.HintSize="498,987" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <Sequence x:Key="Fire Average Joe" sap:VirtualizedContainerService.HintSize="498,995" sap2010:WorkflowViewState.IdRef="Sequence_9">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>

@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="DigitalVendorPhoneBook" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="752,1192" sap2010:WorkflowViewState.IdRef="DigitalVendorPhoneBook_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="DigitalVendorPhoneBook" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="744,1192" sap2010:WorkflowViewState.IdRef="DigitalVendorPhoneBook_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="26">
       <x:String>System.Activities</x:String>
@@ -67,11 +67,7 @@
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="DigitalVendorPhoneBook" sap:VirtualizedContainerService.HintSize="498,1127" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="scg:Dictionary(x:String, x:Double)" Name="VendorPhoneBook">
-        <Variable.Default>
-          <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Double)" ExpressionText="New Dictionary(Of String, Double)()" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:Double)" Default="[New Dictionary(Of String, Double)()]" Name="VendorPhoneBook" />
       <Variable x:TypeArguments="x:String" Name="vendorLookUp" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -79,11 +75,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="VendorPhoneBook.Add(&quot;NotWalMart&quot;, 8009256278);&#xD;&#xA;VendorPhoneBook.Add(&quot;NotTarget&quot;, 8004400680);&#xD;&#xA;VendorPhoneBook.Add(&quot;NotCostco&quot;, 8007742678);&#xD;&#xA;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="436,165" sap2010:WorkflowViewState.IdRef="InvokeCode_2" Language="CSharp">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="VendorPhoneBook.Add(&quot;NotWalMart&quot;, 8009256278);&#xA;VendorPhoneBook.Add(&quot;NotTarget&quot;, 8004400680);&#xA;VendorPhoneBook.Add(&quot;NotCostco&quot;, 8007742678);&#xA;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="436,165" sap2010:WorkflowViewState.IdRef="InvokeCode_2" Language="CSharp">
       <ui:InvokeCode.Arguments>
-        <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Double)" x:Key="VendorPhoneBook">
-          <VisualBasicReference x:TypeArguments="scg:Dictionary(x:String, x:Double)" ExpressionText="VendorPhoneBook" />
-        </InOutArgument>
+        <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Double)" x:Key="VendorPhoneBook">[VendorPhoneBook]</InOutArgument>
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
     <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:Double)" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="436,327" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[VendorPhoneBook]">
@@ -110,12 +104,8 @@
     </ui:InputDialog>
     <ui:InvokeCode ContinueOnError="{x:Null}" Code="if(VendorPhoneBook.ContainsKey(vendorLookUp)){&#xD;&#xA;&#x9;Console.WriteLine(vendorLookUp + &quot; is in our directory.&quot;);&#xD;&#xA;} else {&#xD;&#xA;&#x9;Console.WriteLine(&quot;Our apologies but &quot; + vendorLookUp + &quot; is not in our directory.&quot;);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;&#x9;Console.WriteLine(&quot;Adding &quot; + vendorLookUp);&#xD;&#xA;&#x9;VendorPhoneBook.Add(vendorLookUp, 123456789);&#xD;&#xA;&#x9;Console.WriteLine(&quot;Removing NotCostco as we did not come to an agreement&quot;);&#xD;&#xA;&#x9;VendorPhoneBook.Remove(&quot;NotCostco &quot;);&#xD;&#xA;&#x9;var numberOfvendors = VendorPhoneBook.Count;&#xD;&#xA;&#x9;Console.WriteLine(&quot;The total number of our vendors, which is &quot; + numberOfvendors);&#xD;&#xA;&#x9;foreach(var vendor in VendorPhoneBook) {&#xD;&#xA;&#x9;&#x9;Console.WriteLine(vendor.Key + &quot;'s phone number is &quot; + vendor.Value);&#xD;&#xA;&#x9;}" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="436,165" sap2010:WorkflowViewState.IdRef="InvokeCode_3" Language="CSharp">
       <ui:InvokeCode.Arguments>
-        <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Double)" x:Key="VendorPhoneBook">
-          <VisualBasicReference x:TypeArguments="scg:Dictionary(x:String, x:Double)" ExpressionText="VendorPhoneBook" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="vendorLookUp">
-          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="vendorLookUp" />
-        </InOutArgument>
+        <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Double)" x:Key="VendorPhoneBook">[VendorPhoneBook]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="vendorLookUp">[vendorLookUp]</InOutArgument>
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
   </Sequence>
