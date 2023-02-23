@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1725,11224" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1725,11354" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="35">
       <x:String>System.Activities</x:String>
@@ -90,7 +90,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="496,11159" sap2010:WorkflowViewState.IdRef="Sequence_9">
+  <Sequence sap:VirtualizedContainerService.HintSize="496,11289" sap2010:WorkflowViewState.IdRef="Sequence_9">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -256,13 +256,13 @@
         <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAH2SURBVFhH7ZS/SgNBEMZTCGIhprELGhG0MqbRxkJbESGPkM5WEGxs0lgfpLSxtPQNvCeQPIK+wbXpzu+3zsR1vcQoKhb3wcfdzs58Mzv7p1GjRo0av4XN9faRsW2mnwGC4rl4Lw7MHKAxCbGXCZ/Ec3P7HiTQFavEj2y+n9hTjsRmEPsqFDiIhFKy6l5im8Ynk5wPCmiKVD4RiP6dqc80FvadbyvkSMs9IcFVyXORM5HaoSesYt/SVEMOiLpAnDzYVvo3ZWM4dmZisXTxUKyeXhYb251ZiWNWF6GJaS0Nttb+SRElh3kyLpfP7sr1nYM4jk6lhVWfB034SWfVkMBJcGvvOE42EikgZZinUxtbHeLQZGFsKwcavcxSvkFG7jcBOHjbvRt8sd9KPFy9mRiOu2K2ePVYULTiPiaMIYd43z15/OWqhXusr19L7JAWd4NQiuG4uXD9nK3tHs6+gibiol4IreOBefeAaBwKsCFjfLGF59fMAWaj9T0zuY0teX1JmRQR8QJo9yQghea8A/h5F7zgTGQBaPJl7NuIDV8/BzliVOICOFe3MoJ80g6wQi+ITsKgafO+QArMzfaqYT+34qeJHZPgCBpTPElJwmFmYRTiXaIAf9zIF7pi4b8DJaBQzlAoxMx/ByXlZoVDaKYaNWr8NzQaL8eEf+BHvBMgAAAAAElFTkSuQmCC" InformativeScreenshot="19f19249a7f274e76529e9ecbeee1a77.jpg" Selector="&lt;html app='msedge.exe' title='Home | Pega Studio Training Web Application' /&gt;" Title="Home | Pega Studio Training Web Application" Url="https://training.openspan.com/home" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Home | Pega Studio Training Web Application" sap:VirtualizedContainerService.HintSize="434,7594" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" InteractionMode="DebuggerApi" ScopeGuid="7669d4a4-f354-42b6-8d45-cdbb80d24593" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Home | Pega Studio Training Web Application" sap:VirtualizedContainerService.HintSize="434,7724" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" InteractionMode="DebuggerApi" ScopeGuid="7669d4a4-f354-42b6-8d45-cdbb80d24593" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,7377" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,7507" sap2010:WorkflowViewState.IdRef="Sequence_8">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="billaddressFirstName">
                 <Variable.Default>
@@ -741,6 +741,7 @@
                 </uix:TargetAnchorable>
               </uix:NGetText.Target>
             </uix:NGetText>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="338,90" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[OrderNumber.ToString]" />
             <uix:NClick ClickType="Single" DisplayName="Click 'Profile'" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7669d4a4-f354-42b6-8d45-cdbb80d24593" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://training.openspan.com/order/complete_order#" DesignTimeRectangle="917, 133, 30, 16" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl parentid='profile_menu' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='profile_menu' tag='IMG' type='' class='' aaname='Settings' /&gt;" Guid="0d9b0acb-f18f-4113-9b47-000cfe1d1f4d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAUCAYAAADoZO9yAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPvSURBVEhLzVR9TFtVHL3J1vdeaTYXE12MS8wSI4lZlhmjCZqMxWSaYIgmLmQ6pptxGyBDzDYGZB24hdXIptGomAlkfk0dG8PugylfMgYMBkgpGxUoUNaywmhXNmgHLRzvve3rXgs1sf/ILzk5ffd37vmd3Nv3iOaNE1gMIJqkH7EYQGI2/4xwaN7089MZenxxwYQRpxsFp41Yuf00x6sFtVidchbL3vpl3t5oQWK2lEGGJrkMq3b9hg15NXgiVY8XD1TjYscIWNUaR7Hp2BUcKuvG2MR9dA+78HzOH3yP0iNaEPXWcsh4dIceugoTrA43fmiwoLRukA+Va2rahxnfLP9to6f0VOYlvi/m7QceHMlhz+FYoE/U2/RQv0NB+fH0SzjXcYsPUhYbzkJ4Z+cCK4DV6UHy121IPNqMpM9b+f4gAn7/5ZlI716AjOU7K7Ht+F+BUYDL7UWlYQy5ZT1IO9GFg2dMqDeNw01DseqzT6Jn5B7n2KzaoE80INKO38GwvaQL2vJeVF0f50NYiOL6m1irvYLlqVVcsyKtCs991ISKdjs8M/4rYmUem0K8roVrON4LcCQs0CfirmqIO6vQ3O/iw+Xjv2p24Zn8Jsh9Jb9Q0IKhcQ/X+ag+jj4/nFE3T8dYSiiEtDY5ImQdEdP+hJhaB6NtErNz/hAzvjmcbB2FmvUCfSWz9UYaXNbH6doW1DGWNh6GevXLESHriJjeAOH9y1DvbkDiV0ZuzINcG4OUfhlyX8lsvbF/ggbhcn4qNaY783RB/UsHFgwhpNQEdUT8oBlCRhMe2d+KxG9ucFNWVwfvYt2RTsh9Jccd7cKQw/9as9COKS/0Xc55OpnFhE8gxb4WEoJdi0BDyDoiZLZARZFQZILNNc3NWbk8PnzbNIo1RwzQ7GkF0y3bew3PFhpx1uCEx+v/s1bQAPsqLEgq7eU+wod+P9lXZml9VkgQIaU6pE+EPe1QUawrvA6Lcxo9dg9nVixM5Q0Xcs5bkXrKAu1FG+r778KteGM2FtEAdL/sE4nFpBKo12z2n0Z8Nj2FxpA+UWV1QrWvE1K2AZu+G0RCsRm7y62w3/MGRvmPf4oOV37Q5DrZ4YS03wDZ599Y2PITxNe/5FcR3ieqnG6osikoCwy53VhfNBAMct87R6/hQYCRCS8+axjHKYMLtyd92Hv+FkTmofDhLCN8PUKfLM3tgRJqrQmvlAyj9/Y0zI4ZZJ6zY+uvNrRZ/d+N7ztciD1mxipdHzYct2BF/t8h+6MFWartQzikvH48+ekQ4otv4qHDZqzUDaC0fQJDd7zIr3HgsY8HuE51cP7eaEGW5A1gMYAsOTSM/x/D+Ad1t6LEKdvK3wAAAABJRU5ErkJggg==" InformativeScreenshot="e97f7a4bcd6acca795977d10e8f4257d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Order Products | Pega Studio Training Web Application' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
